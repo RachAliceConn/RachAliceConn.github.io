@@ -86,3 +86,78 @@ Highcharts.chart('container', {
         }
     }]
 });
+
+
+Highcharts.chart('test', {
+  chart: {
+    type: 'column'
+  },
+  title: {
+    text: '20 UK companies with highest spend on EU lobbying'
+  },
+  subtitle: {
+    text: 'Source: <a href="http://ec.europa.eu/transparencyregister/public/homePage.do">EU Transparency Register</a>'
+  },
+  xAxis: {
+    type: 'category',
+    labels: {
+      rotation: -45,
+      style: {
+        fontSize: '13px',
+        fontFamily: 'Verdana, sans-serif'
+      }
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Lobbying spend'
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  tooltip: {
+    pointFormat: 'Lobbying Spend: <b>{point.y:.1f}</b>'
+  },
+  series: [{
+    name: 'Big Spends',
+    borderWidth: 1,
+
+    data: [
+      ['BP p.l.c. (BP)', 2750000],
+      ['G Plus Ltd (GPLUS)', 2500000],
+      ['British American Tobacco (BAT)', 2250000],
+      ['Brunswick Group LLP', 2000000],
+      ['Samsung Electronics Europe', 2000000],
+      ['GlaxoSmithKline (GSK)', 1500000],
+      ['FIPRA International Limited (FIPRA)', 1500000],
+      ['HSBC Holdings PLC (HSBC)', 1500000],
+      ['Diageo', 1500000],
+      ['Barclays PLC', 1257307],
+      ['Bank of America Merrill Lynch (BofAML)', 1250000],
+      ['BT Group plc (BT)', 1000000],
+      ['Landmark Public Policy Advisers Europe Ltd (Landmark Public Affa)', 1000000],
+      ['INOVYN ChlorVinyls', 1000000],
+      ['Instinctif Partners', 900000],
+      ['Universal Music Group International (UMGI)', 900000],
+      ['Rolls-Royce plc', 900000],
+      ['Morgan Stanley (MS)', 800000],
+      ['Standard Chartered Bank', 700000],
+      ['The Royal Bank of Scotland (RBS)', 700000],
+    ],
+
+    dataLabels: {
+      enabled: false,
+      rotation: -90,
+      color: '#FFFFFF',
+      align: 'right',
+      format: '{point.y:.1f}', // one decimal
+      y: 10, // 10 pixels down from the top
+      style: {
+        fontSize: '13px',
+        fontFamily: 'Verdana, sans-serif'
+      }
+    }
+  }]
+});
